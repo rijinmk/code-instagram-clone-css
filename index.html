@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+  <link rel="shortcut icon" href="https://instagram.com/static/images/ico/favicon-192.png/b407fa101800.png">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style/main.css">
+  <title>Instagram</title>
+</head>
+<body>
+  
+  <div id="container">
+    
+    <div class="signup">
+      <img src="style/insta.png" alt="">
+      <h4>Sign up to see photos and <br> videos from your friends.</h4>
+      <button><i class="fab fa-facebook"></i> &nbsp;Log in with Facebook</button>
+      <div class="or-outer">
+        <span>OR</span>
+      </div>
+      <div class="inputs">
+        <input type="text" placeholder="Mobile Number or Email">
+        <input type="text" placeholder="Full Name">
+        <input type="text" placeholder="Username">
+        <input type="text" placeholder="Password">
+      </div>
+      <button style="top:10px;">Sign Up</button>
+      <p id="tnc" align="center">By signing up, you agree to our <br> <strong>Terms & Privacy Policy.</strong></p>
+    </div>
+    
+    <div class="signin">
+      <img src="style/insta.png" alt="">
+      <div class="inputs">
+        <input type="text" placeholder="Phone number, username or Email">
+        <input type="text" placeholder="Password">
+      </div>
+      <button style="top:10px;">Log In</button>
+      <p id="fp" align="center">Forgot Password?</strong></p>
+    </div>
+    
+    <div class="login">
+      <span id="account-signin" class="account">Have an account? <a id="login-btn" href="#">Log in</a></span>
+      <span id="account-signup" class="account">Don't have an account? <a id="register-btn" href="#">Sign up</a><span>
+    </div>
+    
+  </div>
+  
+  <div class="space"></div>
+  <script src="script/jq.js"></script>
+  <script>
+    function showLogin(){
+      $('.signin').css('display','block');
+      $('.signup').css('display','none');
+      $('.login').css('margin-top','45px'); 
+    }
+    function showSignup(){
+      $('.signin').css('display','none');
+      $('.signup').css('display','block');
+      $('.login').css('margin-top','282px');
+    }
+    $('#login-btn').on('click',function(){
+        $ ('#account-signin').hide(); 
+        $ ('#account-signup').show(); 
+        showLogin();
+    });
+    $('#register-btn').on('click',function(){
+      $ ('#account-signin').show(); 
+      $ ('#account-signup').hide(); 
+        showSignup();
+    });
+  </script>
+</body>
+</html>
